@@ -1,0 +1,34 @@
+{
+  "lyceum": 1,
+  "title": "Radium Girls",
+  "description": "Research for the lobby of the WEHS production of Radium Girls: database articles, open-web sources, primary documents, and design pointers for posters and trifolds.",
+  "url": "https://mistertlibrary.github.io/radiumgirls/",
+  "series": "",
+  "course": "",
+  "subjects": [
+    "Social Studies",
+    "Science"
+  ],
+  "sections": [
+    {
+      "title": "Start Here",
+      "anchor": "#start",
+      "keywords": ["database articles", "Library of Congress", "Ottawa, Illinois"]
+    },
+    {
+      "title": "Historical Figures",
+      "anchor": "#figures",
+      "keywords": ["Marie Curie", "Grace Fryer", "Katherine Schaub", "Irene Rudolph", "Mollie Maggia", "Katherine Wiley", "Harrison Martland"]
+    },
+    {
+      "title": "Topics",
+      "anchor": "#topics",
+      "keywords": ["Radithor", "William J.A. Bailey", "lip pointing", "Consumers League", "workplace safety", "U.S. Radium Corporation", "Superfund", "Raymond Berry", "1928 settlement"]
+    },
+    {
+      "title": "Designing for the Lobby",
+      "anchor": "#design",
+      "keywords": ["trifold", "poster", "exhibit labels", "public domain", "MLA"]
+    }
+  ]
+}

@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" data-size="medium" data-font="serif">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radium Girls | WEHS Library Lyceum</title>
+<meta name="description" content="Research for the lobby of the WEHS production of Radium Girls: database articles, open-web sources, primary documents, and design pointers for posters and trifolds.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WEHS Library Lyceum">
+<meta property="og:title" content="Radium Girls">
+<meta property="og:description" content="Research for the lobby of the WEHS production of Radium Girls: database articles, open-web sources, primary documents, and design pointers for posters and trifolds.">
+<meta property="og:url" content="https://mistertlibrary.github.io/radiumgirls/">
+<meta property="og:image" content="https://mistertlibrary.github.io/librarylyceum/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/librarylyceum/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/librarylyceum/favicon.png">
+<script>
+(function(){try{var d=document.documentElement,t=localStorage.getItem("lyceum-theme"),s=localStorage.getItem("lyceum-size"),f=localStorage.getItem("lyceum-font");if(t==="dark"||t==="contrast")d.dataset.theme=t;if(s==="small"||s==="large")d.dataset.size=s;if(f==="sans"||f==="dyslexic")d.dataset.font=f}catch(e){}})();
+</script>
+<style>
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400 800;font-display:swap;src:url("/librarylyceum/fonts/eb-garamond-400-800.woff2") format("woff2")}
+@font-face{font-family:"EB Garamond";font-style:italic;font-weight:400 800;font-display:swap;src:url("/librarylyceum/fonts/eb-garamond-400-800-italic.woff2") format("woff2")}
+@font-face{font-family:"Libre Franklin";font-style:normal;font-weight:100 900;font-display:swap;src:url("/librarylyceum/fonts/libre-franklin-100-900.woff2") format("woff2")}
+@font-face{font-family:"OpenDyslexic";font-weight:400;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-400.woff2") format("woff2")}
+@font-face{font-family:"OpenDyslexic";font-weight:700;font-display:swap;src:url("/librarylyceum/fonts/opendyslexic-700.woff2") format("woff2")}
+:root{--paper:#f5f0e4;--card:#fcf9f2;--ink:#1f1a17;--muted:#5d544a;--brick:#c52122;--brick-ink:#a51b1c;--mortar:#ddd2bf;--night:#2f1414;--night-ink:#f5f0e4;--face:#1c1210;--lume:#d4f2b6;--glow:rgba(190,240,150,.55);--focus:#1f5e7a;--serif:"EB Garamond",Garamond,"Iowan Old Style",Georgia,serif;--sans:"Libre Franklin","Franklin Gothic Medium",system-ui,sans-serif;--base:19px}
+[data-theme="dark"]{--paper:#161210;--card:#211b18;--ink:#eee6da;--muted:#bcb0a1;--brick:#d9504a;--brick-ink:#f0928a;--mortar:#3e3530;--night:#100b0a;--night-ink:#eee6da;--face:#0b0807;--focus:#8cc8e0}
+[data-theme="contrast"]{--paper:#000;--card:#000;--ink:#fff;--muted:#fff;--brick:#ffd54a;--brick-ink:#ffd54a;--mortar:#fff;--night:#000;--night-ink:#fff;--face:#000;--lume:#ffd54a;--glow:transparent;--focus:#ffd54a}
+[data-size="small"]{--base:17px}[data-size="large"]{--base:22px}
+[data-font="sans"]{--serif:var(--sans)}
+[data-font="dyslexic"]{--serif:"OpenDyslexic",sans-serif;--sans:"OpenDyslexic",sans-serif}
+*{box-sizing:border-box}
+html{font-size:var(--base);scroll-behavior:smooth;scroll-padding-top:4rem}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65;font-size:1.05rem}
+a{color:var(--brick-ink);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+h1,h2,h3{text-align:center;line-height:1.15;font-weight:600}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip{position:absolute;left:-999px;top:0;background:var(--card);color:var(--ink);padding:.5rem 1rem;z-index:20}
+.skip:focus{left:1rem;top:1rem}
+.topbar{background:#000;color:var(--night-ink);font-family:var(--sans);font-size:.72rem;letter-spacing:.06em;padding:.55rem 1.2rem;text-align:center}
+.topbar a{color:var(--night-ink);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+.hero{position:relative;background:radial-gradient(ellipse at 50% 62%,#4a2420 0%,var(--night) 58%);color:var(--night-ink);text-align:center;padding:4rem 1rem 4.5rem;overflow:hidden}
+[data-theme="dark"] .hero,[data-theme="contrast"] .hero{background:var(--night)}
+.kicker{font-family:var(--sans);font-size:.8rem;letter-spacing:.14em;font-weight:600;color:#d9cdb9;margin:0 0 .8rem}
+.hero h1{font-size:clamp(2.6rem,7vw,4.6rem);margin:0;font-weight:500;letter-spacing:.01em}
+.hero .rule{width:64px;height:3px;background:var(--brick);margin:1.4rem auto 0}
+.lede{max-width:34rem;margin:1.4rem auto 0;font-style:italic;font-size:1.15rem}
+.dial{display:block;width:min(430px,88vw);height:auto;margin:2.2rem auto 0}
+.dial .bezel{fill:none;stroke:#b9a88f;stroke-width:5}
+[data-theme="contrast"] .dial .bezel{stroke:#fff}
+.dial .face{fill:var(--face)}
+.dial .ticks{fill:none;stroke:var(--lume);opacity:.35}
+.dial .hand{stroke:var(--lume);stroke-linecap:round;opacity:.7}
+.dial .pin{fill:#b9a88f}
+.dial a{cursor:pointer}
+.dial .hit{fill:transparent;stroke:transparent;stroke-width:3}
+.dial text{fill:var(--lume);font-family:var(--serif);font-size:30px;font-weight:600;text-anchor:middle;dominant-baseline:central;filter:drop-shadow(0 0 5px var(--glow))}
+.dial a:hover text{fill:#fff}
+.dial a:focus{outline:none}
+.dial a:focus-visible .hit{stroke:#ffd54a}
+.legend{list-style:none;margin:2rem auto 0;padding:0;max-width:40rem;columns:2 15rem;column-gap:2rem;text-align:left;font-family:var(--sans);font-size:.82rem}
+.legend li{break-inside:avoid;margin:0 0 .45rem;display:flex;gap:.6rem;align-items:baseline}
+.legend b{display:inline-block;min-width:1.6rem;text-align:right;color:var(--lume);font-family:var(--serif);font-size:1rem}
+.legend a{color:var(--night-ink);text-decoration:none;border-bottom:1px solid rgba(255,255,255,.3)}
+.legend a:hover{border-bottom-color:var(--lume)}
+.map{position:sticky;top:0;z-index:8;background:var(--card);border-bottom:1px solid var(--mortar);font-family:var(--sans);font-size:.72rem}
+.map ol{list-style:none;margin:0 auto;padding:.7rem 1rem;display:flex;gap:.3rem 1.4rem;justify-content:center;flex-wrap:wrap;max-width:70rem}
+.map a{color:var(--ink);text-decoration:none;font-weight:500}
+.map a:hover{color:var(--brick-ink)}
+main{display:block}
+.chapter{padding:4.5rem 1.25rem;border-bottom:1px solid var(--mortar)}
+.wrap{max-width:38rem;margin:0 auto}
+.wide{max-width:70rem;margin:0 auto}
+.chapter h2{font-size:clamp(1.9rem,4vw,2.6rem);margin:0 0 1.2rem;font-weight:500}
+.intro{text-align:center;max-width:36rem;margin:0 auto 2.5rem}
+.access{max-width:38rem;margin:0 auto 2rem;border:1px dashed var(--mortar);background:var(--card);padding:1rem 1.3rem;font-family:var(--sans);font-size:.85rem}
+.access p{margin:0}
+.access p+p{margin-top:.4rem;color:var(--muted)}
+.dbs{list-style:none;margin:0 auto 3rem;padding:0;max-width:46rem}
+.dbs li{padding-left:2rem;text-indent:-2rem;margin:0 0 1rem;font-size:.95rem;overflow-wrap:anywhere}
+h3.sub{font-family:var(--sans);font-size:.78rem;letter-spacing:.12em;font-weight:700;color:var(--brick-ink);margin:0 0 1.2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,21rem),1fr));gap:1.6rem}
+.card{background:var(--card);border:1px solid var(--mortar);border-top:6px solid var(--night);padding:0 1.5rem 1.5rem;display:flex;flex-direction:column}
+[data-theme="dark"] .card{border-top-color:var(--brick)}
+.hour{width:3.1rem;height:3.1rem;margin:-1.55rem auto 0;border-radius:50%;background:var(--face);border:3px solid #b9a88f;color:var(--lume);font-family:var(--serif);font-size:1.35rem;font-weight:600;display:flex;align-items:center;justify-content:center;text-shadow:0 0 6px var(--glow)}
+[data-theme="contrast"] .hour{border-color:#fff}
+.card h3{font-size:1.4rem;margin:.9rem 0 1rem;font-weight:500}
+.label{font-family:var(--sans);font-size:.7rem;letter-spacing:.12em;font-weight:700;color:var(--muted);margin:1rem 0 .4rem}
+.ask{margin:0;padding-left:1.2rem}
+.ask li{margin:0 0 .4rem;font-style:italic}
+.reads{list-style:none;margin:0;padding:0}
+.reads li{margin:0 0 .9rem;line-height:1.45}
+.reads a{font-weight:600}
+.pub{display:block;font-family:var(--sans);font-size:.72rem;color:var(--muted);margin-top:.1rem}
+.note{display:block;font-size:.95rem;margin-top:.2rem}
+.closer{border-left:4px solid var(--brick);padding:.4rem 0 .4rem .9rem;margin:1rem 0 0;font-size:.95rem}
+.fig{margin:1.2rem 0 0}.fig img{display:block;width:100%;height:auto;border:1px solid var(--mortar);background:#fff}.fig figcaption{font-family:var(--sans);font-size:.72rem;color:var(--muted);margin-top:.4rem;line-height:1.45}.fig.solo{max-width:15rem;margin-left:auto;margin-right:auto}.figs{display:grid;grid-template-columns:1fr 1fr;gap:1rem}.figs .fig{margin-top:1.2rem}
+.terms{display:flex;flex-wrap:wrap;gap:.4rem;margin:0;padding:0;list-style:none;font-family:var(--sans);font-size:.75rem}
+.terms li{border:1px solid var(--mortar);padding:.2rem .55rem;background:var(--paper)}
+.model{max-width:38rem;margin:2.5rem auto 0;border:2px solid var(--night);background:var(--card);padding:1.2rem 1.5rem}
+[data-theme="dark"] .model{border-color:var(--brick)}
+.model .label{margin-top:0;color:var(--brick-ink)}
+.model p{margin:.3rem 0 0}
+.band{background:var(--night);color:var(--night-ink)}
+.band a{color:var(--night-ink)}
+.band .card{color:var(--ink)}
+.band .card a{color:var(--brick-ink)}
+.band .intro{color:var(--night-ink)}
+.tips{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,19rem),1fr));gap:1.4rem}
+.tip{background:var(--card);color:var(--ink);border:1px solid var(--mortar);padding:1.3rem 1.5rem}
+.tip h3{font-size:1.3rem;margin:0 0 .8rem;font-weight:500}
+.tip p,.tip li{font-size:.97rem}
+.tip ul{padding-left:1.2rem;margin:.4rem 0 0}
+.tip a{color:var(--brick-ink)}
+table.sizes{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.8rem;margin:.6rem 0}
+table.sizes th,table.sizes td{border-bottom:1px solid var(--mortar);padding:.35rem .4rem;text-align:left}
+table.sizes caption{caption-side:bottom;font-size:.72rem;color:var(--muted);text-align:left;padding-top:.4rem}
+details.cited{max-width:46rem;margin:0 auto}
+details.cited summary{cursor:pointer;font-family:var(--sans);font-weight:600;font-size:.9rem;text-align:center;list-style:none;padding:.8rem;border:1px solid var(--mortar);background:var(--card)}
+details.cited summary::-webkit-details-marker{display:none}
+details.cited summary::after{content:" +";color:var(--brick-ink)}
+details.cited[open] summary::after{content:" \2212"}
+details.cited p{padding-left:2rem;text-indent:-2rem;font-size:.9rem;margin:1rem 0;overflow-wrap:anywhere}
+footer{background:var(--night);color:var(--night-ink);text-align:center;font-family:var(--sans);font-size:.78rem;padding:2.5rem 1rem 5rem}
+footer a{color:var(--night-ink)}
+footer .big{font-family:var(--serif);font-size:1.4rem;font-style:italic;margin:0 0 .6rem}
+.a11y-toggle{position:fixed;right:1rem;bottom:1rem;z-index:15;width:3rem;height:3rem;border-radius:50%;border:2px solid var(--night-ink);background:var(--brick);color:#fff;font-family:var(--serif);font-size:1.15rem;font-weight:600;cursor:pointer}
+[data-theme="contrast"] .a11y-toggle{color:#000}
+.a11y-panel{position:fixed;right:1rem;bottom:4.6rem;z-index:15;width:16.5rem;background:var(--card);color:var(--ink);border:2px solid var(--ink);padding:1rem;font-family:"Libre Franklin",system-ui,sans-serif;font-size:14px}
+.a11y-panel[hidden]{display:none}
+.a11y-group{border:0;margin:0 0 .8rem;padding:0}
+.a11y-group legend{font-weight:700;margin-bottom:.35rem}
+.a11y-group .opts{display:flex;flex-wrap:wrap;gap:.3rem}
+.a11y-group button{font:inherit;padding:.3rem .65rem;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer}
+.a11y-group button[aria-pressed="true"]{background:var(--ink);color:var(--card)}
+@media print{.topbar,.map,.a11y-toggle,.a11y-panel,.dial{display:none}.hero,.band,footer{background:#fff!important;color:#000}.legend a,.legend b,.band a{color:#000}.card{break-inside:avoid}details.cited>*{display:block}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main-content">Skip to content</a>
+<div class="topbar"><a href="/librarylyceum/guides.html">WEHS Library Lyceum</a> research guides presents...</div>
+<header class="hero">
+<p class="kicker">Lobby Research</p>
+<h1>Radium Girls</h1>
+<div class="rule"></div>
+<p class="lede">Twelve stops around the dial! Pick a person or a topic, read widely, and bring the real story into the lobby.</p>
+<svg class="dial" viewBox="0 0 400 400" role="group" aria-label="Watch dial index: each numeral jumps to a section">
+<circle class="bezel" cx="200" cy="200" r="194"/>
+<circle class="face" cx="200" cy="200" r="188"/>
+<circle class="ticks" cx="200" cy="200" r="176" stroke-width="7" stroke-dasharray="1.6 16.83"/>
+<circle class="ticks" cx="200" cy="200" r="176" stroke-width="14" stroke-dasharray="4 88.15" stroke-dashoffset="2" style="opacity:.6"/>
+<line class="hand" x1="200" y1="200" x2="141" y2="159" stroke-width="7"/>
+<line class="hand" x1="200" y1="200" x2="296" y2="145" stroke-width="4"/>
+<circle class="pin" cx="200" cy="200" r="6"/>
+<a href="#start" aria-label="12: Start Here"><circle class="hit" cx="200" cy="56" r="24"/><text x="200" y="56">12</text></a>
+<a href="#curie" aria-label="1: Marie Curie"><circle class="hit" cx="272" cy="75.3" r="24"/><text x="272" y="75.3">1</text></a>
+<a href="#painters" aria-label="2: Grace Fryer, Katherine Schaub, Irene Rudolph, Mollie Maggia"><circle class="hit" cx="324.7" cy="128" r="24"/><text x="324.7" y="128">2</text></a>
+<a href="#wiley" aria-label="3: Katherine Wiley"><circle class="hit" cx="344" cy="200" r="24"/><text x="344" y="200">3</text></a>
+<a href="#martland" aria-label="4: Dr. Harrison Martland"><circle class="hit" cx="324.7" cy="272" r="24"/><text x="324.7" y="272">4</text></a>
+<a href="#radithor" aria-label="5: William J.A. Bailey and Radithor"><circle class="hit" cx="272" cy="324.7" r="24"/><text x="272" y="324.7">5</text></a>
+<a href="#lip" aria-label="6: Lip Pointing"><circle class="hit" cx="200" cy="344" r="24"/><text x="200" y="344">6</text></a>
+<a href="#league" aria-label="7: The Consumers' League"><circle class="hit" cx="128" cy="324.7" r="24"/><text x="128" y="324.7">7</text></a>
+<a href="#safety" aria-label="8: Impact on Workplace Safety Laws and Procedures"><circle class="hit" cx="75.3" cy="272" r="24"/><text x="75.3" y="272">8</text></a>
+<a href="#plant" aria-label="9: The US Radium Corporation plant in Orange, NJ"><circle class="hit" cx="56" cy="200" r="24"/><text x="56" y="200">9</text></a>
+<a href="#superfund" aria-label="10: The Oranges and EPA Superfund Sites"><circle class="hit" cx="75.3" cy="128" r="24"/><text x="75.3" y="128">10</text></a>
+<a href="#trial" aria-label="11: The Trial and Court Coverage"><circle class="hit" cx="128" cy="75.3" r="24"/><text x="128" y="75.3">11</text></a>
+</svg>
+<ol class="legend" aria-label="Dial index">
+<li><b>12</b><a href="#start">Start Here</a></li>
+<li><b>1</b><a href="#curie">Marie Curie</a></li>
+<li><b>2</b><a href="#painters">Grace Fryer, Katherine Schaub, Irene Rudolph, Mollie Maggia</a></li>
+<li><b>3</b><a href="#wiley">Katherine Wiley</a></li>
+<li><b>4</b><a href="#martland">Dr. Harrison Martland</a></li>
+<li><b>5</b><a href="#radithor">William J.A. Bailey and Radithor</a></li>
+<li><b>6</b><a href="#lip">Lip Pointing</a></li>
+<li><b>7</b><a href="#league">The Consumers' League</a></li>
+<li><b>8</b><a href="#safety">Impact on Workplace Safety Laws and Procedures</a></li>
+<li><b>9</b><a href="#plant">The US Radium Corporation plant in Orange, NJ</a></li>
+<li><b>10</b><a href="#superfund">The Oranges and EPA Superfund Sites</a></li>
+<li><b>11</b><a href="#trial">The Trial and Court Coverage</a></li>
+</ol>
+</header>
+<nav class="map" aria-label="Guide map">
+<ol>
+<li><a href="#start">Start Here</a></li>
+<li><a href="#figures">Historical Figures</a></li>
+<li><a href="#topics">Topics</a></li>
+<li><a href="#design">Designing for the Lobby</a></li>
+<li><a href="#cited">Works cited</a></li>
+</ol>
+</nav>
+<main id="main-content">
+
+<section id="start" class="chapter">
+<div class="wide">
+<h2>Start Here</h2>
+<p class="intro">Begin with the library's databases! Their encyclopedia articles are editorially sound and easy to cite. Then, if you need more, branch out to the open web.</p>
+<aside class="access" aria-label="Off-campus access">
+<p>Away from campus? Having trouble logging in? You can access any of our databases by using the login credentials available <a href="https://docs.google.com/document/d/1oGCj_JLUUAQV9jOgOQpNmrZlYmntAysr68tuXCWGCy4/view" target="_blank" rel="noopener noreferrer">here<span class="vh"> (opens in a new tab)</span></a></p>
+<p>You must be logged into your West Essex High School Google account to access this document.</p>
+</aside>
+<h3 class="sub">Database Articles</h3>
+<ul class="dbs">
+<li>Vezina, Kenrick. &ldquo;The Radium Girls: The Dark Story of America&rsquo;s Shining Women.&rdquo; <i>Magill&rsquo;s Literary Annual 2018</i>, June 2018, pp. 490&ndash;94. <i>EBSCOhost</i>, <a href="https://research.ebsco.com/plink/29346411-fa9f-3efc-8414-2406ec869e0c" target="_blank" rel="noopener">research.ebsco.com/plink/29346411-fa9f-3efc-8414-2406ec869e0c<span class="vh"> (opens in a new tab)</span></a>.</li>
+<li>Campbell, Josephine. &ldquo;Radium Girls.&rdquo; <i>Salem Press Encyclopedia</i>, Mar. 2026. <i>EBSCOhost</i>, <a href="https://research.ebsco.com/plink/e03eb23c-08b3-3ee3-be7f-53ad124644d1" target="_blank" rel="noopener">research.ebsco.com/plink/e03eb23c-08b3-3ee3-be7f-53ad124644d1<span class="vh"> (opens in a new tab)</span></a>.</li>
+<li>"Radium Girls: The Women Who Fought for Their Lives in a Killer Workplace." <i>Britannica School</i>, Encyclop&aelig;dia Britannica, 8 Aug. 2026. <a href="https://school.eb.com/levels/high/article/Radium-Girls-The-Women-Who-Fought-for-Their-Lives-in-a-Killer-Workplace/649822" target="_blank" rel="noopener">school.eb.com/levels/high/article/Radium-Girls-The-Women-Who-Fought-for-Their-Lives-in-a-Killer-Workplace/649822<span class="vh"> (opens in a new tab)</span></a>. Accessed 19 Oct. 2026.</li>
+<li>O'Connor, Sean Michael. "Radium Girls." <i>The American Mosaic: Women's History in the United States</i>, ABC-CLIO, 2026, <a href="https://womenshistory.abc-clio.com/Search/Display/2343145" target="_blank" rel="noopener">womenshistory.abc-clio.com/Search/Display/2343145<span class="vh"> (opens in a new tab)</span></a>. Accessed 19 Oct. 2026.</li>
+<li>Jacobson, Steven. &ldquo;Radium Girls.&rdquo; <i>Encyclopedia of American Environmental History, Second Edition</i>, Facts On File, 2024. <i>American History</i>, <a href="https://online.infobase.com/Auth/Index?aid=17282&amp;itemid=WE52&amp;articleId=209587" target="_blank" rel="noopener">online.infobase.com/Auth/Index?aid=17282&amp;itemid=WE52&amp;articleId=209587<span class="vh"> (opens in a new tab)</span></a>.</li>
+</ul>
+<h3 class="sub">On the Open Web</h3>
+<div class="cards">
+<article class="card">
+<p class="hour" aria-hidden="true">12</p>
+<h3>The Whole Story</h3>
+<ul class="reads">
+<li><a href="https://blogs.loc.gov/headlinesandheroes/2019/03/radium-girls-living-dead-women/" target="_blank" rel="noopener">Radium Girls: Living Dead Women<span class="vh"> (opens in a new tab)</span></a><span class="pub">Library of Congress, 2019</span><span class="note">The New Jersey and Illinois cases told through newspaper pages from the time.</span></li>
+<li><a href="https://ahf.nuclearmuseum.org/ahf/history/radium-girls/" target="_blank" rel="noopener">The Radium Girls<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Museum of Nuclear Science &amp; History, 2017</span><span class="note">From the radium craze to the Manhattan Project.</span></li>
+<li><a href="https://www.archives.gov/files/citizen-archivist/images/08-23-2018-radium-girls.pdf" target="_blank" rel="noopener">The Radium Girls (PDF)<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Archives, 2018</span><span class="note">A short newsletter piece on company records found during an EPA cleanup.</span></li>
+<li><a href="https://womenshistory.app.box.com/v/RadiumGirlsSlideDeck" target="_blank" rel="noopener">Radium Girls: Ladies Who Impacted the American Workplace<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Women's History Museum</span><span class="note">A classroom slide deck.</span></li>
+</ul>
+</article>
+<article class="card">
+<p class="hour" aria-hidden="true">12</p>
+<h3>Beyond New Jersey</h3>
+<ul class="reads">
+<li><a href="https://www.nprillinois.org/equity-justice/2018-01-25/the-radium-girls-an-illinois-tragedy" target="_blank" rel="noopener">The Radium Girls: An Illinois Tragedy<span class="vh"> (opens in a new tab)</span></a><span class="pub">NPR Illinois, 2018</span><span class="note">The dial painters of Ottawa, Illinois, and a niece who tells her aunt's story.</span></li>
+<li><a href="https://orau.org/blog/history/radium-girls-the-health-scandal-of-radium-dial-painters-in-the-1920s-and-1930s.html" target="_blank" rel="noopener">Radium Girls: The Health Scandal of Radium Dial Painters<span class="vh"> (opens in a new tab)</span></a><span class="pub">Oak Ridge Associated Universities, 2025</span><span class="note">The science of radium in the body, with objects from ORAU's museum.</span></li>
+</ul>
+</article>
+</div>
+<div class="model">
+<p class="label">Student Model</p>
+<p><a href="https://dh-wordpress.ramapo.edu/discovering1920s/blog/2025/02/19/the-radium-girls-court-trial/" target="_blank" rel="noopener">The Radium Girls Court Trial<span class="vh"> (opens in a new tab)</span></a>, Ramapo College of New Jersey, 2025</p>
+<p>A college senior wrote this essay. Notice how every claim leads to a footnote, and how she pulls quotations from 1928 newspapers. Aim to do the same in your work!</p>
+</div>
+</div>
+</section>
+
+<section id="figures" class="chapter">
+<div class="wide">
+<h2>Historical Figures</h2>
+<p class="intro">Many of the play's characters share names with real people. Learn who they were before they became characters.</p>
+<div class="cards">
+
+<article class="card" id="curie">
+<p class="hour" aria-hidden="true">1</p>
+<h3>Marie Curie</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Radium made Curie famous. How did her fame help sell radium to the public?</li><li>What did scientists know about radium's dangers before 1917?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://www.nobelprize.org/prizes/chemistry/1911/marie-curie/biographical/" target="_blank" rel="noopener">Marie Curie: Biographical<span class="vh"> (opens in a new tab)</span></a><span class="pub">The Nobel Prize</span><span class="note">Her official biography. She won twice: physics in 1903, chemistry in 1911.</span></li>
+<li><a href="https://history.aip.org/exhibits/curie/" target="_blank" rel="noopener">Marie Curie and the Science of Radioactivity<span class="vh"> (opens in a new tab)</span></a><span class="pub">American Institute of Physics</span><span class="note">An online exhibit based on Naomi Pasachoff's biography.</span></li>
+<li><a href="https://www.nist.gov/pml/marie-curie-and-nbs-radium-standards" target="_blank" rel="noopener">Marie Curie and the NBS Radium Standards<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Institute of Standards and Technology</span><span class="note">How the U.S. measured radium against Curie's standard. Look for her 1921 visit to the United States.</span></li>
+</ul>
+<figure class="fig solo"><img src="images/radium-and-beauty-1918.jpg" width="1000" height="1347" loading="lazy" alt="A 1918 newspaper ad titled Radium and Beauty. A woman touches her face beside jars and bottles of Radior beauty products."><figcaption>"Radium and Beauty," Radior Co. advertisement. <i>New-York Tribune</i>, 10 Nov. 1918, pt. 5, p. 12. Library of Congress, Chronicling America.</figcaption></figure>
+<p class="label">Search</p>
+<ul class="terms"><li>Marie Curie radium</li><li>Curie 1921 visit</li><li>radium craze</li></ul>
+</article>
+
+<article class="card" id="painters">
+<p class="hour" aria-hidden="true">2</p>
+<h3>Grace Fryer, Katherine Schaub, Irene Rudolph, Mollie Maggia</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Who was each woman before she became a plaintiff or a headline?</li><li>How does the play change them?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://njwomenshistory.org/biographies/katherine-schaub/" target="_blank" rel="noopener">Katherine Schaub<span class="vh"> (opens in a new tab)</span></a><span class="pub">New Jersey Women's History, Rowan University, 2024</span><span class="note">A short biography, including the death of her cousin Irene.</span></li>
+<li><a href="https://blog.sciencemuseumgroup.org.uk/the-radium-girls/" target="_blank" rel="noopener">The Radium Girls<span class="vh"> (opens in a new tab)</span></a><span class="pub">Science Museum Group, 2023</span><span class="note">A London museum's post naming Amelia Maggia and Irene Rudolph, with objects from its collection.</span></li>
+<li><a href="https://www.nist.gov/blogs/taking-measure/new-jerseys-radium-girls-and-nist-trained-scientist-who-came-their-aid" target="_blank" rel="noopener">New Jersey's 'Radium Girls' and the NIST-Trained Scientist Who Came to Their Aid<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Institute of Standards and Technology, 2022</span><span class="note">Names the five women who sued, Grace Fryer among them, and describes Mollie Maggia's illness.</span></li>
+</ul>
+<p class="closer">Look closer: Mollie Maggia's given name was Amelia. Search every spelling!</p>
+<p class="label">Search</p>
+<ul class="terms"><li>Grace Fryer</li><li>Katherine Schaub</li><li>Amelia Maggia</li><li>Irene Rudolph</li></ul>
+</article>
+
+<article class="card" id="wiley">
+<p class="hour" aria-hidden="true">3</p>
+<h3>Katherine Wiley</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Who called Wiley in, and what did she find?</li><li>Why would a consumers' group investigate a factory?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://archives.libraries.rutgers.edu/repositories/11/resources/733" target="_blank" rel="noopener">Consumers League of New Jersey Records<span class="vh"> (opens in a new tab)</span></a><span class="pub">Rutgers University Libraries</span><span class="note">The League's papers. The history note describes Wiley's 1924 investigation.</span></li>
+<li><a href="https://njwomenshistory.org/Period_5/radiumdial.htm" target="_blank" rel="noopener">Watch Dial Painters, c. 1922-1923<span class="vh"> (opens in a new tab)</span></a><span class="pub">New Jersey Women's History</span><span class="note">A photograph of dial painters at work, with a caption crediting Wiley with the first investigation.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>Katherine Wiley</li><li>Consumers League of New Jersey radium</li></ul>
+</article>
+
+<article class="card" id="martland">
+<p class="hour" aria-hidden="true">4</p>
+<h3>Dr. Harrison Martland</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>How did a county doctor prove what was killing the women?</li><li>Why would anyone resist his findings?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://archives.libraries.rutgers.edu/repositories/9/resources/424" target="_blank" rel="noopener">Harrison Stanford Martland, MD, A Guide to the Papers of<span class="vh"> (opens in a new tab)</span></a><span class="pub">Rutgers Special Collections in the History of Medicine</span><span class="note">His papers. The biographical note traces his radium research, begun in 1924.</span></li>
+<li><a href="https://newarkpubliclibrary.libraryhost.com/repositories/3/resources/238" target="_blank" rel="noopener">Harrison S. Martland Collection<span class="vh"> (opens in a new tab)</span></a><span class="pub">Newark Public Library</span><span class="note">A Newark collection that includes a 1929 journal article by Martland.</span></li>
+<li><a href="https://www.nj.gov/dep/hpo/1identify/nrsr_19_Mar_Radium_girls.pdf" target="_blank" rel="noopener">Radium Girls: The Story of US Radium's Superfund Site (PDF)<span class="vh"> (opens in a new tab)</span></a><span class="pub">New Jersey Historic Preservation Office</span><span class="note">Its timeline notes what the county medical examiner found in 1925.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>Harrison Martland radium</li><li>radium necrosis</li><li>radium jaw</li></ul>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="topics" class="chapter">
+<div class="wide">
+<h2>Topics</h2>
+<p class="intro">Pick one topic and trace it from the 1920s to today.</p>
+<div class="cards">
+
+<article class="card" id="radithor">
+<p class="hour" aria-hidden="true">5</p>
+<h3>William J.A. Bailey and Radithor</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Who bought Radithor? Why did they trust it?</li><li>What changed after its most famous customer died?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://orau.org/health-physics-museum/collection/radioactive-quack-cures/pills-potions-and-other-miscellany/radithor.html" target="_blank" rel="noopener">Radithor (ca. 1928)<span class="vh"> (opens in a new tab)</span></a><span class="pub">ORAU Museum of Radiation and Radioactivity</span><span class="note">A real bottle, Bailey's checkered career, and the case of Eben Byers.</span></li>
+<li><a href="https://www.popsci.com/science/radioactive-water/" target="_blank" rel="noopener">The Radioactive 'Miracle Water' That Killed Its Believers<span class="vh"> (opens in a new tab)</span></a><span class="pub">Popular Science, 2025</span><span class="note">A magazine history of Radithor and the man who drank it.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>Radithor</li><li>Eben Byers</li><li>radium patent medicine</li></ul>
+</article>
+
+<article class="card" id="lip">
+<p class="hour" aria-hidden="true">6</p>
+<h3>Lip Pointing</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Who taught the women to point their brushes? Why?</li><li>What did the company's own scientists do differently?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://www.nist.gov/blogs/taking-measure/new-jerseys-radium-girls-and-nist-trained-scientist-who-came-their-aid" target="_blank" rel="noopener">New Jersey's 'Radium Girls' and the NIST-Trained Scientist<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Institute of Standards and Technology, 2022</span><span class="note">What the women were told about lip pointing.</span></li>
+<li><a href="https://orau.org/blog/history/radium-girls-the-health-scandal-of-radium-dial-painters-in-the-1920s-and-1930s.html" target="_blank" rel="noopener">Radium Girls: The Health Scandal of Radium Dial Painters<span class="vh"> (opens in a new tab)</span></a><span class="pub">Oak Ridge Associated Universities, 2025</span><span class="note">A physicist's description of "tipping" the brush.</span></li>
+<li><a href="https://hsph.harvard.edu/news/centennial-radium-forged-report/" target="_blank" rel="noopener">Deadly Occupation, Forged Report<span class="vh"> (opens in a new tab)</span></a><span class="pub">Harvard T.H. Chan School of Public Health, 2013</span><span class="note">What Harvard investigators saw inside the Orange factory.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>lip pointing radium</li><li>dial painters brush</li></ul>
+</article>
+
+<article class="card" id="league">
+<p class="hour" aria-hidden="true">7</p>
+<h3>The Consumers' League</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>How did a league of mostly volunteer women take on a corporation?</li><li>What happened to the report Harvard investigators wrote?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://archives.libraries.rutgers.edu/repositories/11/resources/733" target="_blank" rel="noopener">Consumers League of New Jersey Records<span class="vh"> (opens in a new tab)</span></a><span class="pub">Rutgers University Libraries</span><span class="note">The history note covers the League's radium work from 1924 to 1935.</span></li>
+<li><a href="https://findingaids.loc.gov/exist_collections/ead3pdf/mss/2011/ms011241.pdf" target="_blank" rel="noopener">National Consumers' League Records (PDF)<span class="vh"> (opens in a new tab)</span></a><span class="pub">Library of Congress</span><span class="note">The national League's papers, including its radium poisoning files.</span></li>
+<li><a href="https://hsph.harvard.edu/news/centennial-radium-forged-report/" target="_blank" rel="noopener">Deadly Occupation, Forged Report<span class="vh"> (opens in a new tab)</span></a><span class="pub">Harvard T.H. Chan School of Public Health, 2013</span><span class="note">How a League contact helped expose a doctored report.</span></li>
+<li><a href="https://www.marketplace.org/2017/11/28/radium-girls-workers-rights-labor-law/" target="_blank" rel="noopener">It's Against the Law for Employers to Make You Sick<span class="vh"> (opens in a new tab)</span></a><span class="pub">Marketplace, 2017</span><span class="note">A radio story on the League, the lawsuits, and workers' rights.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>Consumers League of New Jersey</li><li>National Consumers League radium</li><li>Alice Hamilton</li></ul>
+</article>
+
+<article class="card" id="safety">
+<p class="hour" aria-hidden="true">8</p>
+<h3>Impact on Workplace Safety Laws and Procedures</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Which protections can you trace back to the dial painters?</li><li>What does the National Safety Council say has not changed?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://www.govinfo.gov/link/crec/167/s/6105" target="_blank" rel="noopener">Honoring the Lives and Legacies of the "Radium Girls"<span class="vh"> (opens in a new tab)</span></a><span class="pub">U.S. Senate, Congressional Record, 2021</span><span class="note">A primary source: the Senate's 2021 resolution and the reasons it gives.</span></li>
+<li><a href="https://ahf.nuclearmuseum.org/ahf/history/radium-girls/" target="_blank" rel="noopener">The Radium Girls<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Museum of Nuclear Science &amp; History, 2017</span><span class="note">How the dial painters shaped safety rules for the Manhattan Project.</span></li>
+<li><a href="https://www.nsc.org/safety-first/radium-girls" target="_blank" rel="noopener">The Radium Girls: What Has Really Changed?<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Safety Council, 2017</span><span class="note">An argument that the work is not finished.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>occupational disease radium</li><li>workers' compensation history</li><li>OSHA history</li></ul>
+</article>
+
+<article class="card" id="plant">
+<p class="hour" aria-hidden="true">9</p>
+<h3>The US Radium Corporation plant in Orange, NJ</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>What did the plant look like? Who worked where?</li><li>What survives of it today?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://www.nj.gov/dep/hpo/1identify/nrsr_19_Mar_Radium_girls.pdf" target="_blank" rel="noopener">Radium Girls: The Story of US Radium's Superfund Site (PDF)<span class="vh"> (opens in a new tab)</span></a><span class="pub">New Jersey Historic Preservation Office</span><span class="note">The plant's story, with photographs of its buildings before demolition.</span></li>
+<li><a href="https://catalog.archives.gov/id/40978844" target="_blank" rel="noopener">Records Related to Radium Dial Painters, 1917&ndash;1949<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Archives Catalog</span><span class="note">A primary source: more than 9,000 scanned pages of the company's own records.</span></li>
+<li><a href="https://text-message.blogs.archives.gov/2018/01/04/the-radium-girls-at-the-national-archives/" target="_blank" rel="noopener">The Radium Girls at the National Archives<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Archives, 2018</span><span class="note">How the company's radioactive papers were found during a cleanup and scanned before they were destroyed.</span></li>
+<li><a href="https://archives.libraries.rutgers.edu/repositories/9/resources/431" target="_blank" rel="noopener">United States Radium Corporation Records<span class="vh"> (opens in a new tab)</span></a><span class="pub">Rutgers Special Collections in the History of Medicine</span><span class="note">Describes the company's records and its plant at High and Alden Streets.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>United States Radium Corporation</li><li>Undark paint</li><li>Orange NJ radium</li></ul>
+</article>
+
+<article class="card" id="superfund">
+<p class="hour" aria-hidden="true">10</p>
+<h3>The Oranges and EPA Superfund Sites</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Where did the radium waste go after the plant closed?</li><li>Who paid to clean it up? How long did it take?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://www.epa.gov/superfund/us-radium" target="_blank" rel="noopener">U.S. Radium Corp. Superfund Site Profile<span class="vh"> (opens in a new tab)</span></a><span class="pub">U.S. Environmental Protection Agency</span><span class="note">The EPA's page for the site in Orange, with cleanup reports.</span></li>
+<li><a href="https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/1aad4509b5f605f0852571cc006484ec.html" target="_blank" rel="noopener">EPA Cleans Up the U.S. Radium Site in Essex County<span class="vh"> (opens in a new tab)</span></a><span class="pub">U.S. Environmental Protection Agency, 2006</span><span class="note">Soil removed from about 250 properties in Orange, West Orange, and South Orange.</span></li>
+<li><a href="https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/ce9b097f00f8ac1c852575a7006a3c5f.html" target="_blank" rel="noopener">EPA Proposes to Remove Montclair/West Orange and Glen Ridge Radium Superfund Sites<span class="vh"> (opens in a new tab)</span></a><span class="pub">U.S. Environmental Protection Agency, 2009</span><span class="note">Neighboring towns where radium-tainted soil was used as fill.</span></li>
+</ul>
+<p class="label">Search</p>
+<ul class="terms"><li>U.S. Radium Superfund</li><li>Glen Ridge radium</li><li>Montclair radium soil</li></ul>
+</article>
+
+<article class="card" id="trial">
+<p class="hour" aria-hidden="true">11</p>
+<h3>The Trial and Court Coverage (Judge William Clark and attorney Raymond Berry)</h3>
+<p class="label">Ask</p>
+<ul class="ask"><li>Why did delays matter so much in this case?</li><li>How did newspapers shape what happened in court?</li></ul>
+<p class="label">Read</p>
+<ul class="reads">
+<li><a href="https://blogs.loc.gov/headlinesandheroes/2019/03/radium-girls-living-dead-women/" target="_blank" rel="noopener">Radium Girls: Living Dead Women<span class="vh"> (opens in a new tab)</span></a><span class="pub">Library of Congress, 2019</span><span class="note">Headlines from the 1928 case. Click any clipping to open the full page.</span></li>
+<li><a href="https://www.loc.gov/resource/sn83045462/1928-05-13/ed-1/?sp=58" target="_blank" rel="noopener">"Five Women Dying of Radium Poison"<span class="vh"> (opens in a new tab)</span></a><span class="pub">The Sunday Star, 13 May 1928</span><span class="note">A primary source: one full newspaper page from the trial months.</span></li>
+<li><a href="https://www.nist.gov/blogs/taking-measure/new-jerseys-radium-girls-and-nist-trained-scientist-who-came-their-aid" target="_blank" rel="noopener">New Jersey's 'Radium Girls' and the NIST-Trained Scientist<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Institute of Standards and Technology, 2022</span><span class="note">Physicist Elizabeth Hughes's testimony for Raymond Berry's clients.</span></li>
+<li><a href="https://catalog.archives.gov/id/75722886" target="_blank" rel="noopener">Settlement Agreement, June 8, 1928<span class="vh"> (opens in a new tab)</span></a><span class="pub">National Archives Catalog</span><span class="note">A primary source: the signed settlement, with transcriptions.</span></li>
+<li><a href="https://www.fjc.gov/history/judges/clark-william" target="_blank" rel="noopener">Clark, William<span class="vh"> (opens in a new tab)</span></a><span class="pub">Federal Judicial Center</span><span class="note">Judge Clark's record of service. His role in the case is not here; find it in the database articles.</span></li>
+</ul>
+<div class="figs">
+<figure class="fig"><img src="images/sunday-star-1928-05-13-page.jpg" width="860" height="1138" loading="lazy" alt="A full newspaper page. The radium story runs down the left column beside a large department store ad."><figcaption>"Five Women Dying of Radium Poison," left column. <i>The Sunday Star</i>, 13 May 1928, pt. 3, p. 14. Library of Congress, Chronicling America.</figcaption></figure>
+<figure class="fig"><img src="images/settlement-1928-06-08.jpg" data-full="images/settlement-1928-06-08-full.jpg" width="1000" height="1464" loading="lazy" alt="The typed first page of a 1928 agreement between the United States Radium Corporation and Grace Fryer."><figcaption>Settlement agreement between the United States Radium Corporation and Grace Fryer, 8 June 1928, p. 1. National Archives.</figcaption></figure>
+</div>
+<p class="label">Search</p>
+<ul class="terms"><li>Raymond Berry radium</li><li>Judge William Clark radium</li><li>radium settlement 1928</li></ul>
+</article>
+
+</div>
+</div>
+</section>
+
+<section id="design" class="chapter band">
+<div class="wide">
+<h2>Designing for the Lobby</h2>
+<p class="intro">Your audience reads on the move. Design for a glance, then reward a closer look. These pointers come from the Smithsonian's <a href="https://www.sifacilities.si.edu/sites/default/files/Files/Accessibility/accessible-exhibition-design1.pdf" target="_blank" rel="noopener">Guidelines for Accessible Exhibition Design<span class="vh"> (opens in a new tab)</span></a>.</p>
+<div class="tips">
+<article class="tip">
+<h3>Write It Short</h3>
+<ul>
+<li>Keep each label to 75 to 100 words.</li>
+<li>Aim for sentences of about 15 words; never use more than 25.</li>
+<li>One idea per sentence. Use the active voice.</li>
+<li>Open each panel with a short overview in large print.</li>
+</ul>
+</article>
+<article class="tip">
+<h3>Make It Readable</h3>
+<ul>
+<li>Use a sans serif or simple serif typeface. Skip condensed, light, and script faces.</li>
+<li>Never set text in all caps.</li>
+<li>Print on solid backgrounds, never over a photo.</li>
+<li>Choose matte paper to cut glare.</li>
+</ul>
+<table class="sizes">
+<thead><tr><th scope="col">Reader stands</th><th scope="col">Smallest type</th></tr></thead>
+<tbody><tr><td>About 3 feet away</td><td>48 point</td></tr><tr><td>About 6.5 feet away</td><td>100 point</td></tr><tr><td>About 10 feet away</td><td>148 point</td></tr></tbody>
+<caption>Smithsonian figures, set in Helvetica.</caption>
+</table>
+</article>
+<article class="tip">
+<h3>Hang It Right</h3>
+<ul>
+<li>Center wall labels about 54 inches from the floor so seated and standing visitors can both read them.</li>
+<li>Let readers get close. Some visitors with low vision read from 3 inches away.</li>
+</ul>
+</article>
+<article class="tip">
+<h3>Show Them with Care</h3>
+<p>These women were real. Before you use a photograph of illness, ask: Does it serve the story or only shock? How would she want to be remembered? Who in your audience might be looking at a relative?</p>
+</article>
+<article class="tip">
+<h3>Use Images You May Use</h3>
+<p>Works published in the United States in 1930 or earlier are now in the <a href="https://web.law.duke.edu/cspd/publicdomainday/2026/" target="_blank" rel="noopener">public domain<span class="vh"> (opens in a new tab)</span></a>. That includes most newspaper pages from the 1920s. Read the rights statement on every image anyway.</p>
+</article>
+<article class="tip">
+<h3>Credit Everything</h3>
+<p>Every photograph and quotation on your board needs a short credit line. Keep a full works cited list in MLA on the back of your trifold. <a href="https://mistertlibrary.github.io/mla/" target="_blank" rel="noopener">Citation Station<span class="vh"> (opens in a new tab)</span></a> can help.</p>
+</article>
+</div>
+</div>
+</section>
+
+<section id="cited" class="chapter">
+<h2>Works cited (MLA)</h2>
+<details class="cited"><summary>Show sources</summary>
+<p>Balkansky, Arlene. "Radium Girls: Living Dead Women." <i>Headlines &amp; Heroes</i>, Library of Congress, 19 Mar. 2019, <a href="https://blogs.loc.gov/headlinesandheroes/2019/03/radium-girls-living-dead-women/">blogs.loc.gov/headlinesandheroes/2019/03/radium-girls-living-dead-women/</a>. Accessed 19 Oct. 2026.</p>
+<p>Brancaccio, David, and Katie Long. "It's Against the Law for Employers to Make You Sick. Thank the 'Radium Girls' for That." <i>Marketplace</i>, 28 Nov. 2017, <a href="https://www.marketplace.org/2017/11/28/radium-girls-workers-rights-labor-law/">www.marketplace.org/2017/11/28/radium-girls-workers-rights-labor-law/</a>. Accessed 19 Oct. 2026.</p>
+<p>Bryan-Quamina, Gabrielle. "The Radium Girls." <i>Science Museum Group Blog</i>, 11 Apr. 2023, <a href="https://blog.sciencemuseumgroup.org.uk/the-radium-girls/">blog.sciencemuseumgroup.org.uk/the-radium-girls/</a>. Accessed 19 Oct. 2026.</p>
+<p>Campbell, Josephine. &ldquo;Radium Girls.&rdquo; <i>Salem Press Encyclopedia</i>, Mar. 2026. <i>EBSCOhost</i>, research.ebsco.com/plink/e03eb23c-08b3-3ee3-be7f-53ad124644d1.</p>
+<p>"Clark, William." <i>Biographical Directory of Article III Federal Judges</i>, Federal Judicial Center, <a href="https://www.fjc.gov/history/judges/clark-william">www.fjc.gov/history/judges/clark-william</a>. Accessed 19 Oct. 2026.</p>
+<p>"Consumers League of New Jersey Records." <i>Special Collections and University Archives</i>, Rutgers University Libraries, <a href="https://archives.libraries.rutgers.edu/repositories/11/resources/733">archives.libraries.rutgers.edu/repositories/11/resources/733</a>. Accessed 19 Oct. 2026.</p>
+<p>Coursey, Bert. "Marie Curie and the NBS Radium Standards." <i>National Institute of Standards and Technology</i>, 4 Feb. 2026, <a href="https://www.nist.gov/pml/marie-curie-and-nbs-radium-standards">www.nist.gov/pml/marie-curie-and-nbs-radium-standards</a>. Accessed 19 Oct. 2026.</p>
+<p>Cowen, Ron. "New Jersey's 'Radium Girls' and the NIST-Trained Scientist Who Came to Their Aid." <i>Taking Measure</i>, National Institute of Standards and Technology, 16 Mar. 2022, <a href="https://www.nist.gov/blogs/taking-measure/new-jerseys-radium-girls-and-nist-trained-scientist-who-came-their-aid">www.nist.gov/blogs/taking-measure/new-jerseys-radium-girls-and-nist-trained-scientist-who-came-their-aid</a>. Accessed 19 Oct. 2026.</p>
+<p>Dabbs, Zachary. "The Radium Girls at the National Archives." <i>The Text Message</i>, National Archives, 4 Jan. 2018, <a href="https://text-message.blogs.archives.gov/2018/01/04/the-radium-girls-at-the-national-archives/">text-message.blogs.archives.gov/2018/01/04/the-radium-girls-at-the-national-archives/</a>. Accessed 19 Oct. 2026.</p>
+<p>Davis, Amber. "Radium Girls: The Health Scandal of Radium Dial Painters in the 1920s and 1930s." <i>ORAU: Then &amp; Now</i>, Oak Ridge Associated Universities, 6 Jan. 2025, <a href="https://orau.org/blog/history/radium-girls-the-health-scandal-of-radium-dial-painters-in-the-1920s-and-1930s.html">orau.org/blog/history/radium-girls-the-health-scandal-of-radium-dial-painters-in-the-1920s-and-1930s.html</a>. Accessed 19 Oct. 2026.</p>
+<p>"EPA Cleans Up the U.S. Radium Site in Essex County." <i>U.S. Environmental Protection Agency</i>, 16 Aug. 2006, <a href="https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/1aad4509b5f605f0852571cc006484ec.html">www.epa.gov/archive/epapages/newsroom_archive/newsreleases/1aad4509b5f605f0852571cc006484ec.html</a>. Accessed 19 Oct. 2026.</p>
+<p>"EPA Proposes to Remove Montclair/West Orange and Glen Ridge Radium Superfund Sites from Its Superfund List." <i>U.S. Environmental Protection Agency</i>, 29 Apr. 2009, <a href="https://www.epa.gov/archive/epapages/newsroom_archive/newsreleases/ce9b097f00f8ac1c852575a7006a3c5f.html">www.epa.gov/archive/epapages/newsroom_archive/newsreleases/ce9b097f00f8ac1c852575a7006a3c5f.html</a>. Accessed 19 Oct. 2026.</p>
+<p>"Five Women Dying of Radium Poison." <i>The Sunday Star</i> [Washington, DC], 13 May 1928, pt. 3, p. 14. <i>Chronicling America</i>, Library of Congress, <a href="https://www.loc.gov/resource/sn83045462/1928-05-13/ed-1/?sp=58">www.loc.gov/resource/sn83045462/1928-05-13/ed-1/?sp=58</a>. Accessed 19 Oct. 2026.</p>
+<p><i>Guidelines for Accessible Exhibition Design</i>. Smithsonian Accessibility Program, <a href="https://www.sifacilities.si.edu/sites/default/files/Files/Accessibility/accessible-exhibition-design1.pdf">www.sifacilities.si.edu/sites/default/files/Files/Accessibility/accessible-exhibition-design1.pdf</a>. Accessed 19 Oct. 2026.</p>
+<p>"Harrison S. Martland Collection." <i>Charles F. Cummings New Jersey Information Center</i>, Newark Public Library, <a href="https://newarkpubliclibrary.libraryhost.com/repositories/3/resources/238">newarkpubliclibrary.libraryhost.com/repositories/3/resources/238</a>. Accessed 19 Oct. 2026.</p>
+<p>"Harrison Stanford Martland, MD, A Guide to the Papers of." <i>RBHS Special Collections in the History of Medicine</i>, Rutgers University Libraries, <a href="https://archives.libraries.rutgers.edu/repositories/9/resources/424">archives.libraries.rutgers.edu/repositories/9/resources/424</a>. Accessed 19 Oct. 2026.</p>
+<p>Jacobson, Steven. &ldquo;Radium Girls.&rdquo; <i>Encyclopedia of American Environmental History, Second Edition</i>, Facts On File, 2024. <i>American History</i>, online.infobase.com/Auth/Index?aid=17282&amp;itemid=WE52&amp;articleId=209587.</p>
+<p>"Marie Curie: Biographical." <i>The Nobel Prize</i>, Nobel Prize Outreach, <a href="https://www.nobelprize.org/prizes/chemistry/1911/marie-curie/biographical/">www.nobelprize.org/prizes/chemistry/1911/marie-curie/biographical/</a>. Accessed 19 Oct. 2026.</p>
+<p>Lyons, Krista. "Radium Girls." <i>National Women's History Museum</i>, <a href="https://www.womenshistory.org/resources/lesson-plan/radium-girls">www.womenshistory.org/resources/lesson-plan/radium-girls</a>. Slide deck, <a href="https://womenshistory.app.box.com/v/RadiumGirlsSlideDeck">womenshistory.app.box.com/v/RadiumGirlsSlideDeck</a>. Accessed 19 Oct. 2026.</p>
+<p>McClellan McAndrew, Tara. "The Radium Girls: An Illinois Tragedy." <i>NPR Illinois</i>, 25 Jan. 2018, <a href="https://www.nprillinois.org/equity-justice/2018-01-25/the-radium-girls-an-illinois-tragedy">www.nprillinois.org/equity-justice/2018-01-25/the-radium-girls-an-illinois-tragedy</a>. Accessed 19 Oct. 2026.</p>
+<p>"National Consumers' League Records." <i>Manuscript Division</i>, Library of Congress, <a href="https://findingaids.loc.gov/exist_collections/ead3pdf/mss/2011/ms011241.pdf">findingaids.loc.gov/exist_collections/ead3pdf/mss/2011/ms011241.pdf</a>. Accessed 19 Oct. 2026.</p>
+<p>O'Connor, Sean Michael. "Radium Girls." <i>The American Mosaic: Women's History in the United States</i>, ABC-CLIO, 2026, womenshistory.abc-clio.com/Search/Display/2343145. Accessed 19 Oct. 2026.</p>
+<p>Pasachoff, Naomi. "Marie Curie and the Science of Radioactivity." <i>Center for History of Physics</i>, American Institute of Physics, 2000, <a href="https://history.aip.org/exhibits/curie/">history.aip.org/exhibits/curie/</a>. Accessed 19 Oct. 2026.</p>
+<p>Perna, Nicolleta. "Katherine Schaub." <i>New Jersey Women's History</i>, Rowan University Libraries, Oct. 2024, <a href="https://njwomenshistory.org/biographies/katherine-schaub/">njwomenshistory.org/biographies/katherine-schaub/</a>. Accessed 19 Oct. 2026.</p>
+<p>"Public Domain Day 2026." <i>Center for the Study of the Public Domain</i>, Duke University School of Law, <a href="https://web.law.duke.edu/cspd/publicdomainday/2026/">web.law.duke.edu/cspd/publicdomainday/2026/</a>. Accessed 19 Oct. 2026.</p>
+<p>"Radithor (ca. 1928)." <i>Museum of Radiation and Radioactivity</i>, Oak Ridge Associated Universities, <a href="https://orau.org/health-physics-museum/collection/radioactive-quack-cures/pills-potions-and-other-miscellany/radithor.html">orau.org/health-physics-museum/collection/radioactive-quack-cures/pills-potions-and-other-miscellany/radithor.html</a>. Accessed 19 Oct. 2026.</p>
+<p>"The Radium Girls." <i>Citizen Archivist Newsletter</i>, National Archives, 23 Aug. 2018, <a href="https://www.archives.gov/files/citizen-archivist/images/08-23-2018-radium-girls.pdf">www.archives.gov/files/citizen-archivist/images/08-23-2018-radium-girls.pdf</a>. Accessed 19 Oct. 2026.</p>
+<p>"The Radium Girls." <i>Nuclear Museum</i>, Atomic Heritage Foundation, 25 Apr. 2017, <a href="https://ahf.nuclearmuseum.org/ahf/history/radium-girls/">ahf.nuclearmuseum.org/ahf/history/radium-girls/</a>. Accessed 19 Oct. 2026.</p>
+<p>"The Radium Girls: What Has Really Changed?" <i>National Safety Council</i>, 22 Dec. 2017, <a href="https://www.nsc.org/safety-first/radium-girls">www.nsc.org/safety-first/radium-girls</a>. Accessed 19 Oct. 2026.</p>
+<p>"Radium and Beauty." Advertisement for Radior Co. <i>New-York Tribune</i>, 10 Nov. 1918, pt. 5, p. 12. <i>Chronicling America</i>, Library of Congress, <a href="https://www.loc.gov/resource/sn83030214/1918-11-10/ed-1/?sp=12">www.loc.gov/resource/sn83030214/1918-11-10/ed-1/?sp=12</a>. Accessed 19 Oct. 2026.</p>
+<p>"Radium Girls: The Story of US Radium's Superfund Site." <i>Preservation Snapshot</i>, New Jersey Historic Preservation Office, <a href="https://www.nj.gov/dep/hpo/1identify/nrsr_19_Mar_Radium_girls.pdf">www.nj.gov/dep/hpo/1identify/nrsr_19_Mar_Radium_girls.pdf</a>. Accessed 19 Oct. 2026.</p>
+<p>"Radium Girls: The Women Who Fought for Their Lives in a Killer Workplace." <i>Britannica School</i>, Encyclop&aelig;dia Britannica, 8 Aug. 2026. school.eb.com/levels/high/article/Radium-Girls-The-Women-Who-Fought-for-Their-Lives-in-a-Killer-Workplace/649822. Accessed 19 Oct. 2026.</p>
+<p>"Records Related to Radium Dial Painters, 1917&ndash;1949." <i>National Archives Catalog</i>, National Archives and Records Administration, NAID 40978844, <a href="https://catalog.archives.gov/id/40978844">catalog.archives.gov/id/40978844</a>. Accessed 19 Oct. 2026.</p>
+<p>Roeder, Amy. "Deadly Occupation, Forged Report." <i>Harvard T.H. Chan School of Public Health</i>, 24 Oct. 2013, <a href="https://hsph.harvard.edu/news/centennial-radium-forged-report/">hsph.harvard.edu/news/centennial-radium-forged-report/</a>. Accessed 19 Oct. 2026.</p>
+<p>"Settlement Agreement, June 8, 1928." <i>National Archives Catalog</i>, National Archives and Records Administration, NAID 75722886, <a href="https://catalog.archives.gov/id/75722886">catalog.archives.gov/id/75722886</a>. Accessed 19 Oct. 2026.</p>
+<p>Steinlauf, Hannah. "The Radium Girls Court Trial." <i>Discovering the 1920s</i>, Ramapo College of New Jersey, 19 Feb. 2025, <a href="https://dh-wordpress.ramapo.edu/discovering1920s/blog/2025/02/19/the-radium-girls-court-trial/">dh-wordpress.ramapo.edu/discovering1920s/blog/2025/02/19/the-radium-girls-court-trial/</a>. Accessed 19 Oct. 2026.</p>
+<p>"United States Radium Corporation Records; Guide to the." <i>RBHS Special Collections in the History of Medicine</i>, Rutgers University Libraries, <a href="https://archives.libraries.rutgers.edu/repositories/9/resources/431">archives.libraries.rutgers.edu/repositories/9/resources/431</a>. Accessed 19 Oct. 2026.</p>
+<p>United States, Congress, Senate. "Honoring the Lives and Legacies of the 'Radium Girls.'" <i>Congressional Record</i>, vol. 167, 9 Aug. 2021, pp. S6105-06, <a href="https://www.govinfo.gov/link/crec/167/s/6105">www.govinfo.gov/link/crec/167/s/6105</a>. Accessed 19 Oct. 2026.</p>
+<p>"U.S. Radium Corp." <i>Superfund Site Profile</i>, U.S. Environmental Protection Agency, <a href="https://www.epa.gov/superfund/us-radium">www.epa.gov/superfund/us-radium</a>. Accessed 19 Oct. 2026.</p>
+<p>Vezina, Kenrick. &ldquo;The Radium Girls: The Dark Story of America&rsquo;s Shining Women.&rdquo; <i>Magill&rsquo;s Literary Annual 2018</i>, June 2018, pp. 490&ndash;94. <i>EBSCOhost</i>, research.ebsco.com/plink/29346411-fa9f-3efc-8414-2406ec869e0c.</p>
+<p>"Watch Dial Painters, c. 1922-1923." <i>New Jersey Women's History</i>, Women's Project of New Jersey, 2002, <a href="https://njwomenshistory.org/Period_5/radiumdial.htm">njwomenshistory.org/Period_5/radiumdial.htm</a>. Accessed 19 Oct. 2026.</p>
+<p>White, April. "The Radioactive 'Miracle Water' That Killed Its Believers." <i>Popular Science</i>, 29 Sept. 2025, <a href="https://www.popsci.com/science/radioactive-water/">www.popsci.com/science/radioactive-water/</a>. Accessed 19 Oct. 2026.</p>
+</details>
+</section>
+</main>
+<footer>
+<p class="big">West Essex High School Library Media Center</p>
+<p><a href="/librarylyceum/">WEHS Library Lyceum</a></p>
+</footer>
+<button class="a11y-toggle" type="button" aria-expanded="false" aria-controls="a11y-panel" aria-label="Reading preferences">Aa</button>
+<div class="a11y-panel" id="a11y-panel" role="group" aria-label="Reading preferences" hidden>
+<fieldset class="a11y-group"><legend>Text size</legend><div class="opts" data-dim="size"><button type="button" data-v="small">Small</button><button type="button" data-v="medium">Medium</button><button type="button" data-v="large">Large</button></div></fieldset>
+<fieldset class="a11y-group"><legend>Theme</legend><div class="opts" data-dim="theme"><button type="button" data-v="light">Light</button><button type="button" data-v="dark">Dark</button><button type="button" data-v="contrast">High contrast</button></div></fieldset>
+<fieldset class="a11y-group"><legend>Typeface</legend><div class="opts" data-dim="font"><button type="button" data-v="serif">Serif</button><button type="button" data-v="sans">Sans</button><button type="button" data-v="dyslexic">OpenDyslexic</button></div></fieldset>
+</div>
+<script>
+(function(){
+var d=document.documentElement,K={size:"lyceum-size",theme:"lyceum-theme",font:"lyceum-font"};
+function sync(){document.querySelectorAll(".a11y-group .opts").forEach(function(g){var dim=g.getAttribute("data-dim");g.querySelectorAll("button").forEach(function(b){b.setAttribute("aria-pressed",String(d.dataset[dim]===b.getAttribute("data-v")))})})}
+document.querySelectorAll(".a11y-group button").forEach(function(b){b.addEventListener("click",function(){var dim=b.parentNode.getAttribute("data-dim"),v=b.getAttribute("data-v");d.dataset[dim]=v;try{localStorage.setItem(K[dim],v)}catch(e){}sync()})});
+var t=document.querySelector(".a11y-toggle"),p=document.getElementById("a11y-panel");
+function close(){p.hidden=true;t.setAttribute("aria-expanded","false")}
+t.addEventListener("click",function(){p.hidden=!p.hidden;t.setAttribute("aria-expanded",String(!p.hidden));if(!p.hidden)p.querySelector("button").focus()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&!p.hidden){close();t.focus()}});
+sync();
+})();
+</script>
+
+<script>(function(){if(window.__lyx)return;window.__lyx=2;
+var css=".lyx{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:4vmin;background:rgba(8,10,12,.94);cursor:zoom-out;overflow:auto}.lyx[hidden]{display:none}.lyx>img{max-width:100%;max-height:calc(100vh - 8vmin - 4.5rem);object-fit:contain;background:#fff}.lyx .lyx-c{width:min(100%,80rem);max-height:calc(100vh - 8vmin - 4.5rem);overflow:auto;font-size:clamp(1rem,1.9vw,1.9rem)}.lyx .lyx-c>*{margin:0!important;max-width:none!important;width:100%!important;cursor:zoom-out}.lyx .lyx-c svg,.lyx .lyx-c video,.lyx .lyx-c img{display:block;width:100%!important;max-width:none!important;height:auto!important;max-height:calc(100vh - 12vmin - 4.5rem)!important;margin:0 auto}.lyx .lyx-c .lyx-pad{background:#fff;color:#111;padding:2rem}.lyx .lyx-cap{color:#f1f1f1;font:15px/1.45 system-ui,sans-serif;max-width:60ch;text-align:center;margin:0}.lyx .lyx-x{position:absolute;top:12px;right:14px;font:700 13px system-ui,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:transparent;border:2px solid #fff;padding:6px 12px;cursor:pointer;z-index:1}.lyx .lyx-x:focus-visible{outline:3px solid #ffd54a;outline-offset:2px}.lyz{cursor:zoom-in}.lyz:focus-visible{outline:3px solid #ffd54a;outline-offset:3px}@media print{.lyx{display:none!important}}";
+var st=document.createElement("style");st.textContent=css;document.head.appendChild(st);
+var box=document.createElement("div");box.className="lyx";box.hidden=true;box.setAttribute("role","dialog");box.setAttribute("aria-modal","true");box.setAttribute("aria-label","Full-size view");
+box.innerHTML='<button type="button" class="lyx-x">Close</button><img alt="" hidden><div class="lyx-c" hidden></div><p class="lyx-cap"></p>';
+var big=box.querySelector("img"),cl=box.querySelector(".lyx-c"),cap=box.querySelector(".lyx-cap"),last=null;
+function ready(f){document.readyState==="loading"?document.addEventListener("DOMContentLoaded",f):f()}
+ready(function(){document.body.appendChild(box);mark(document)});
+var IMG=/\.(jpe?g|png|gif|webp|avif|svg)([?#].*)?$/i,SKIP=".lyx,header,[role=banner],nav,.hero,.no-lightbox,.shot-btn,#lightbox,.lightbox,button,label";
+function okImg(im){if(im.closest(SKIP))return false;if(im.getAttribute("alt")===""&&!im.hasAttribute("data-full"))return false;if(im.id==="lightbox-img"||im.id==="img-preview")return false;var a=im.closest("a[href]");if(a&&!IMG.test(a.getAttribute("href")))return false;return true}
+function okDraw(el){if(el.closest(SKIP)||el.closest("a[href]")||el.closest(".lyz")&&el.closest(".lyz")!==el)return false;if(el.hasAttribute("data-lyx"))return true;if(el.matches("figure"))return !el.querySelector("img,input,textarea,select,button");if(el.matches("svg")){if(el.getAttribute("aria-hidden")==="true"||el.closest("figure,[data-lyx],h1,h2,h3,h4,h5,h6,.title"))return false;if(/crest|logo/i.test((el.getAttribute("aria-label")||"")+((el.querySelector("title")||{}).textContent||"")))return false;var v=(el.getAttribute("viewBox")||"").split(/[\s,]+/);return +v[2]>=150}return false}
+function tag(el,label){el.classList.add("lyz");if(!el.closest("a,button")){el.tabIndex=0;el.setAttribute("role","button");el.setAttribute("aria-label",label)}}
+function mark(root){root=root.querySelectorAll?root:document;
+root.querySelectorAll("img").forEach(function(im){if(!im.classList.contains("lyz")&&okImg(im))tag(im,(im.alt?im.alt+". ":"")+"Open full size")});
+root.querySelectorAll("[data-lyx],figure,svg[role=img]").forEach(function(el){if(el.classList.contains("lyz")||!okDraw(el))return;if(el.matches("figure")&&!el.querySelector("svg,[role=img]"))return;var l=el.getAttribute("aria-label")||(el.querySelector("[aria-label]")||{getAttribute:function(){return""}}).getAttribute("aria-label")||(el.querySelector("title")||{}).textContent||"";if(!el.matches("[role=img],svg")||el.hasAttribute("data-lyx"))tag(el,(l?l+". ":"")+"Open full size");else{el.classList.add("lyz");el.tabIndex=0;el.setAttribute("data-lyx-svg","")}})}
+if(window.MutationObserver)new MutationObserver(function(ms){ms.forEach(function(m){m.addedNodes.forEach(function(n){if(n.nodeType===1&&!box.contains(n))mark(n.tagName==="IMG"?n.parentNode:n)})})}).observe(document.documentElement,{childList:true,subtree:true});
+function show(){box.hidden=false;document.documentElement.style.overflow="hidden";box.querySelector(".lyx-x").focus()}
+function open(el){last=el;cap.textContent="";cl.innerHTML="";cl.hidden=true;big.hidden=true;
+if(el.tagName==="IMG"){var a=el.closest("a[href]");big.src=el.getAttribute("data-full")||(a&&IMG.test(a.getAttribute("href"))?a.href:(el.currentSrc||el.src));big.alt=el.alt||"";big.hidden=false;var f=el.closest("figure"),c=f&&f.querySelector("figcaption");cap.textContent=c?c.textContent.trim():""}
+else{var k=el.cloneNode(true);k.classList.remove("lyz");k.removeAttribute("tabindex");k.removeAttribute("role");k.removeAttribute("aria-label");k.querySelectorAll("[id]").forEach(function(x){x.removeAttribute("id")});k.removeAttribute("id");var bg=getComputedStyle(el).backgroundColor;if(!bg||bg==="rgba(0, 0, 0, 0)"||bg==="transparent"){var w=document.createElement("div");w.className="lyx-pad";w.style.background=getComputedStyle(document.body).backgroundColor||"#fff";w.style.color=getComputedStyle(el).color;w.appendChild(k);k=w}cl.appendChild(k);cl.hidden=false}
+cap.hidden=!cap.textContent;show()}
+function close(){box.hidden=true;big.removeAttribute("src");cl.innerHTML="";document.documentElement.style.overflow="";if(last&&last.focus)last.focus()}
+document.addEventListener("click",function(e){if(!box.hidden){if(box.contains(e.target)&&!(e.target.closest&&e.target.closest("a[href]")))close();return}var el=e.target.closest&&e.target.closest(".lyz");if(!el)return;var ctl=e.target.closest("button,input,textarea,select,summary"),lk=e.target.closest("a[href]");if(ctl&&ctl!==el&&el.contains(ctl))return;if(lk&&!IMG.test(lk.getAttribute("href"))&&lk!==el)return;e.preventDefault();e.stopPropagation();open(el)},true);
+document.addEventListener("keydown",function(e){if(!box.hidden){if(e.key==="Escape"){e.preventDefault();close()}else if(e.key==="Tab"){e.preventDefault();box.querySelector(".lyx-x").focus()}return}var el=e.target.classList&&e.target.classList.contains("lyz")?e.target:null;if(el&&(e.key==="Enter"||e.key===" ")){e.preventDefault();open(el)}});
+})();</script>
+</body>
+</html>
